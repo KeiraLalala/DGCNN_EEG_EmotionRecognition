@@ -101,7 +101,6 @@ Performs **subject-dependent, cross-session evaluation**.
 
 ## 🚀 Usage
 
-```bash
 # Step 1: Precompute DE features
 Run: precompute_de_features.ipynb
 
