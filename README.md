@@ -86,13 +86,6 @@ Performs **subject-dependent, cross-session evaluation**.
 | **Unstable `W*` init** | Use `nn.init.xavier_normal_` |
 | **Gradient explosion** | Add `W_pos += 1e-5 * I` and symmetrize with `W_pos = 0.5 * (W + W.T)` |
 | **Debugging NaNs** | Use loop to check:  
-| ```python
-  for name, param in model.named_parameters():
-      if torch.isnan(param).any():
-          print(f"NaN in weights: {name}")
-      if param.grad is not None and torch.isnan(param.grad).any():
-          print(f"NaN in gradients: {name}")
-  ``` |
 | **Loss diverges** | Reduce `learning_rate` to `1e-5` and restart |
 
 ---
